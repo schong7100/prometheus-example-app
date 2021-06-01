@@ -1,4 +1,4 @@
-module github.com/brancz/prometheus-example-app
+module github.com/rhobs/prometheus-example-app
 
 go 1.13
 
