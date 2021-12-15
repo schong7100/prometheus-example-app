@@ -6,10 +6,10 @@ LDFLAGS="-X main.appVersion=$(VERSION)"
 
 .PHONY : all build image
 
-all: build image
+all: build
 
 build:
 	CGO_ENABLED=0 go build -ldflags=$(LDFLAGS) -o prometheus-example-app --installsuffix cgo main.go
 
-image: build
-	docker build -t ghcr.io/rhobs/$(IMAGE_NAME):$(VERSION) .
+image:
+	docker build -t "ghcr.io/rhobs/$(IMAGE_NAME):$(VERSION)" .
