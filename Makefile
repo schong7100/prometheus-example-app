@@ -12,4 +12,4 @@ build:
 	CGO_ENABLED=0 go build -ldflags=$(LDFLAGS) -o prometheus-example-app --installsuffix cgo main.go
 
 image:
-	docker build -t "ghcr.io/rhobs/$(IMAGE_NAME):$(VERSION)" .
+	docker build -t "quay.io/sunhong/$(IMAGE_NAME):$(VERSION)" .
